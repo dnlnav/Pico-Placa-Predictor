@@ -1,0 +1,6 @@
+<%= form_for @prediction do |f|%>
+    <%= f.text_field :license_plate, class: "license_plate" %>
+    <%= f.date_field :date, class: "date" %>
+    <%= f.time_field :time, class: "time" %>
+    <%= f.submit "Send" %>
+<% end %>
