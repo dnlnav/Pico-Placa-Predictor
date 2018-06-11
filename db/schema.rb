@@ -10,17 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180611022029) do
+ActiveRecord::Schema.define(version: 20180610233135) do
 
   create_table "restrictions", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.integer "plate_number"
     t.integer "morning_schedule_id"
     t.integer "afternoon_schedule_id"
     t.integer "day_of_week"
-    t.index ["afternoon_schedule_id"], name: "index_restrictions_on_afternoon_schedule_id"
-    t.index ["morning_schedule_id"], name: "index_restrictions_on_morning_schedule_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "schedules", force: :cascade do |t|
