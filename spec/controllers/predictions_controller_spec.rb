@@ -5,7 +5,7 @@ RSpec.describe PredictionsController, type: :controller do
         let(:params) do
             {
                 license_plate: 'PSA-0123',
-                date: '18/06/2018',
+                date: '2018-06-18',
                 time: '23:00'
             }
         end
@@ -16,16 +16,17 @@ RSpec.describe PredictionsController, type: :controller do
         end
 
         it "creates a new prediction" do
-            expect(restriction).to receive(:predict).with(params)
-            post :create, params: params
+            expect(restriction).to receive(:predict).with(params.with_indifferent_access)
+            post :create, params: params, format: 'json'
         end
         it "gets the result" do
-            post :create, params: params
+            post :create, params: params, format: 'json'
             expect(assigns[:result_message]).to eq('Go Ahead!')
         end
-        it "redirects to root" do
-            post :create, params: params
-            expect(response).to redirect_to(root_path)
+        it "sends json message" do
+            expected = {:message  => 'Go Ahead!'}.to_json
+            post :create, params: params, format: 'json'
+            expect(response.body).to eq(expected)
         end
     end
 end

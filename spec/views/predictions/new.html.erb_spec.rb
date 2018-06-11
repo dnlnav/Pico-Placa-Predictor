@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "static_pages/index.html.erb", type: :view do
+RSpec.describe "predictions/new.html.erb", type: :view do
   let(:prediction) { mock_model("Prediction").as_new_record.as_null_object }
   before do
     assign(:prediction, prediction)

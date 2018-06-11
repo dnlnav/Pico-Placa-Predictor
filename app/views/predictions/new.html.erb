@@ -1,5 +1,5 @@
-<%= form_tag '/predictions', method: :post do |f|%>
-    <%= text_field_tag :license_plate, class: "license_plate" %>
+<%= form_tag '/predictions.json', method: :post, remote: true, class: 'prediction-form' do |f|%>
+    <%= text_field_tag :license_plate, nil, class: "license_plate" %>
     <%= date_field_tag :date, class: "date" %>
     <%= time_field_tag :time, class: "time" %>
     <%= submit_tag "Send" %>

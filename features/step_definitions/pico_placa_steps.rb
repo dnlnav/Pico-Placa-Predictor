@@ -10,5 +10,6 @@ When("I enter {string}, {string} and {string}") do |license_plate, date, time|
 end
 
 Then("I should see {string}") do |result_message|
+    wait_for_ajax
     expect(page).to have_css('#result', text: result_message)
 end
