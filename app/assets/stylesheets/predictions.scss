@@ -1,3 +1,56 @@
 // Place all the styles related to the Predictions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'variables.scss';
+
+.predictor{
+    text-align: center;
+    background-color: #fff;
+    border: $border;
+    border-radius: 30px;
+    overflow: hidden;
+    width: 90%;
+    height: 90%;
+    max-width: 900px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    &__cont{
+        background-color: #fafafa;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__title{
+        border-bottom: $border;
+        background-color: rgb(185, 6, 6);
+        color: white;
+        padding: 10px;
+    }
+    &__subtitle{
+        padding: 10px;
+    }
+    &__box{
+        border-right: $border;
+        padding-right: 0;
+        @include mobile{
+            border-bottom: $border;
+        }
+    }
+    &__form{
+        text-align: left;
+        padding: 30px;
+    }
+    &__result-cont{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__result{
+        font-size: 6.5em;
+        color: #007bff;
+    }
+    &__btn{
+        padding: 5px 40px;
+    }
+}
