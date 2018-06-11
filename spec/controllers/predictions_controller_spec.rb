@@ -16,12 +16,16 @@ RSpec.describe PredictionsController, type: :controller do
         end
 
         it "creates a new prediction" do
-            expect(restriction).to receive(:predict).with(params.with_indifferent_access)
-            post :new, params: { prediction: params }
+            expect(restriction).to receive(:predict).with(params)
+            post :create, params: params
         end
-        it "returns the result" do
-            post :new, params: { prediction: params }
+        it "gets the result" do
+            post :create, params: params
             expect(assigns[:result_message]).to eq('Go Ahead!')
+        end
+        it "redirects to root" do
+            post :create, params: params
+            expect(response).to redirect_to(root_path)
         end
     end
 end

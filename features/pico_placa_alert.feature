@@ -11,32 +11,32 @@ Scenario Outline: check pico y placa
 
     Scenarios: I don't have pico y placa today nor at this time
         | license_plate | date       | time  | result_message |
-        | PSA-0123      | 18/06/2018 | 23:00 | Go Ahead!      |
-        | PFO-712       | 10/04/2018 | 05:00 | Go Ahead!      |
-        | GMO-1234      | 14/02/2018 | 20:00 | Go Ahead!      |
-        | TAC-5432      | 07/06/2018 | 14:00 | Go Ahead!      |
-        | ICB-7123      | 11/05/2011 | 14:00 | Go Ahead!      |
+        | PSA-0123      | 2018-06-18 | 23:00 | Go Ahead!      |
+        | PFO-712       | 2018-04-10 | 05:00 | Go Ahead!      |
+        | GMO-1234      | 2018-02-14 | 20:00 | Go Ahead!      |
+        | TAC-5432      | 2018-06-07 | 14:00 | Go Ahead!      |
+        | ICB-7123      | 2011-05-11 | 14:00 | Go Ahead!      |
 
     Scenarios: I have pico y placa today but not at this time
         | license_plate | date       | time  | result_message |
-        | PSA-0121      | 18/06/2018 | 23:30 | Go Ahead!      |
-        | PFO-713       | 10/04/2018 | 05:55 | Go Ahead!      |
-        | GMO-1236      | 14/02/2018 | 21:10 | Go Ahead!      |
-        | TAC-5438      | 07/06/2018 | 15:00 | Go Ahead!      |
-        | ICB-7120      | 11/05/2011 | 14:00 | Go Ahead!      |
+        | PSA-0121      | 2018-06-18 | 23:30 | Go Ahead!      |
+        | PFO-713       | 2018-04-10 | 05:55 | Go Ahead!      |
+        | GMO-1236      | 2018-02-14 | 21:10 | Go Ahead!      |
+        | TAC-5438      | 2018-06-07 | 15:00 | Go Ahead!      |
+        | ICB-7120      | 2011-05-11 | 14:00 | Go Ahead!      |
 
     Scenarios: I have pico y placa at this time but not today
         | license_plate | date       | time  | result_message |
-        | PSA-0123      | 18/06/2018 | 7:00  | Go Ahead!      |
-        | PFO-712       | 10/04/2018 | 09:00 | Go Ahead!      |
-        | GMO-1234      | 14/02/2018 | 16:00 | Go Ahead!      |
-        | TAC-5432      | 07/06/2018 | 19:00 | Go Ahead!      |
-        | ICB-7123      | 11/05/2011 | 08:00 | Go Ahead!      |
+        | PSA-0123      | 2018-06-18 | 07:00 | Go Ahead!      |
+        | PFO-712       | 2018-04-10 | 09:00 | Go Ahead!      |
+        | GMO-1234      | 2018-02-14 | 16:00 | Go Ahead!      |
+        | TAC-5432      | 2018-06-07 | 19:00 | Go Ahead!      |
+        | ICB-7123      | 2011-05-11 | 08:00 | Go Ahead!      |
 
     Scenarios: I have pico y placa right now
         | license_plate | date       | time  | result_message |
-        | PSA-0121      | 18/06/2018 | 7:00  | Stay Home!     |
-        | PFO-713       | 10/04/2018 | 09:00 | Stay Home!     |
-        | GMO-1236      | 14/02/2018 | 16:00 | Stay Home!     |
-        | TAC-5438      | 07/06/2018 | 19:00 | Stay Home!     |
-        | ICB-7120      | 11/05/2011 | 9:10  | Stay Home!     |
+        | PSA-0121      | 2018-06-18 | 07:00 | Stay Home!     |
+        | PFO-713       | 2018-04-10 | 09:00 | Stay Home!     |
+        | GMO-1236      | 2018-02-14 | 16:00 | Stay Home!     |
+        | TAC-5438      | 2018-06-07 | 19:00 | Stay Home!     |
+        | ICB-7120      | 2011-05-11 | 09:10 | Stay Home!     |

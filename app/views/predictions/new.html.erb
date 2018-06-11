@@ -1,0 +1,8 @@
+<%= form_tag '/predictions', method: :post do |f|%>
+    <%= text_field_tag :license_plate, class: "license_plate" %>
+    <%= date_field_tag :date, class: "date" %>
+    <%= time_field_tag :time, class: "time" %>
+    <%= submit_tag "Send" %>
+<% end %>
+
+<div id="result"><%= @prediction %></div>

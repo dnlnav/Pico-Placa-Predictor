@@ -11,12 +11,12 @@ RSpec.describe "static_pages/index.html.erb", type: :view do
     expect(rendered).to have_selector("input[type='submit']")
   end
   it "should render a text field for license plate" do
-      expect(rendered).to have_selector("input[type='text'][name='prediction[license_plate]']")
+      expect(rendered).to have_selector("input[type='text'][name='license_plate']")
     end
   it "should render a date field" do
-      expect(rendered).to have_selector("input[type='date'][name='prediction[date]']")
+      expect(rendered).to have_selector("input[type='date'][name='date']")
     end
   it "should render a time field" do
-      expect(rendered).to have_selector("input[type='time'][name='prediction[time]']")
+      expect(rendered).to have_selector("input[type='time'][name='time']")
     end
 end
